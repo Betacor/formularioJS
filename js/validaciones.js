@@ -47,3 +47,15 @@ function validarForm()
         alert("Se ha enviado el formulario");
     }
 }
+function limpiarForm(){
+    document.getElementById("contacto-frm").reset();
+}
+window.onload=function(){                             //win onload = cuando se termine de cargar todo el formulario
+    var botonEnviar,botonLimpiar;
+
+    botonLimpiar=document.getElementById("limpiar")
+    botonLimpiar.onclick=limpiarForm;                    //al hacer onclick en var botonLimpiar llamar a function limpiarForm
+
+    botonEnviar=document.getElementById("enviar")       //al hacer onclick en var botonEnviar llamar a function validarForm
+    botonEnviar.onclick=validarForm;
+}                         
